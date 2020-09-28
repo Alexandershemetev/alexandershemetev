@@ -17,21 +17,17 @@ knitr::opts_chunk$set(
 library(ExPanDaR)
 library(knitr)
 library(kableExtra)
-library(data.table)
-library(tidyverse)
-library(magrittr)
-library(readxl)
-library(tidyr)
-library(writexl)
-library(psych)
-library(plm)
-library(ggplot2)
-library(tm)
-library(lubridate)
-library(RColorBrewer)
-
- library(alexandershemetev, lib.loc = "C:/Users/Alex/Documents/NewRPackage/alexandershemetev/alexandershemetev/")
-
+library(devtools)
+library(plm)# For datasets
+#data("EmplUK", package="plm")
+data("Produc", package="plm")
+#data("Grunfeld", package="plm")
+#data("Wages", package="plm")
+install_github("Alexandershemetev/alexandershemetev")
+library(alexandershemetev)
+alex_hello <<- function() {
+  print("Hello, Dear User!")
+}
 ```
 
 While the main purpose of the alexandershemetev package is to clarify working with R for people with very basic skills for the purposes of qualitative statistical analysis, this package also has additional useful functions and will be developed over time by adding new functions. 
@@ -41,13 +37,17 @@ To see what alexandershemetev has to offer, let's take a quick tour. For more de
 ## Preparation
 
 is designed for `helping to newcomers in R` with `\the most basic functions` to match the purposes of their statistical analysis.
-For this walk-through I will use the data set mtcars, which comes with the basic R environment. ``` {r variables}
-kable(data.frame(mtcars))
+For this walk-through I will use the data set mtcars, which comes with the basic R environment. 
+``` {r variables}
+
+alex_hello()
 ```
+
 ## Descriptive Statistics
 
 ```{r descriptive_statistics_table_winsorized}
-alex_dataframe_descriptive_table(mtcars, showdf = TRUE)
+alex_dataframe_descriptive_table(mtcars, showdf = TRUE, showhtmlinR = TRUE)
+t1_12_28_90_df
 ```
 
 ## Clear environment but save data by pattern
@@ -68,10 +68,30 @@ ls()
 
 ```
 
+## Reveal NAs in the dataset
+
+Sometimes you need to visualize: how many missing values you have in your data, especially in the panel-type data. Good visualization may always help you with this. 
+
+```{r na_revealing}
+# using dataset Produc from plm package as an example 
+# data("Produc", package="plm")
+Produc$test = ifelse(Produc$unemp > 5, Produc$unemp, NA) #Adding NAs occasionally to the dataset
+alex_na_plot(Produc, ts_id = "year")
+
+```
+
+
 ## Conclusion
 
 This is all there is (currently).
 All these functions are rather simple wrappers around established R functions. 
 They can easily be modified to fit your needs and taste. 
-Take look at the [github repository of the ExPanDaR package](https://github.com/Alexandershemetev?tab=repositories) for the codes.
+Take look at the [github repository of the alexandershemetev package](https://github.com/Alexandershemetev?tab=repositories) for the codes.
 Have fun!
+
+## Further development 
+
+The full package is under construction now (this version is the very basic package). To install it use: 
+- library(devtools)
+- install_github("Alexandershemetev/alexandershemetev")
+- library(alexandershemetev)
