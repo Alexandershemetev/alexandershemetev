@@ -1,0 +1,77 @@
+---
+title: "alexandershemetev"
+author: "Alexander Shemetev"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(ExPanDaR)
+library(knitr)
+library(kableExtra)
+library(data.table)
+library(tidyverse)
+library(magrittr)
+library(readxl)
+library(tidyr)
+library(writexl)
+library(psych)
+library(plm)
+library(ggplot2)
+library(tm)
+library(lubridate)
+library(RColorBrewer)
+
+ library(alexandershemetev, lib.loc = "C:/Users/Alex/Documents/NewRPackage/alexandershemetev/alexandershemetev/")
+
+```
+
+While the main purpose of the alexandershemetev package is to clarify working with R for people with very basic skills for the purposes of qualitative statistical analysis, this package also has additional useful functions and will be developed over time by adding new functions. 
+
+To see what alexandershemetev has to offer, let's take a quick tour. For more detailed guidance on how to use a specific function presented below, take a look at the respective function's help page.
+
+## Preparation
+
+is designed for `helping to newcomers in R` with `\the most basic functions` to match the purposes of their statistical analysis.
+For this walk-through I will use the data set mtcars, which comes with the basic R environment. ``` {r variables}
+kable(data.frame(mtcars))
+```
+## Descriptive Statistics
+
+```{r descriptive_statistics_table_winsorized}
+alex_dataframe_descriptive_table(mtcars, showdf = TRUE)
+```
+
+## Clear environment but save data by pattern
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{r cleaning}
+a = 5
+b = 6
+c1 = a + b
+df1 = c(1, 2, 3, 4)
+gf1 = c(8,9,6,8)
+ls()
+alex_clean(except = c("a", "b", "c", "d"), pattern = "df")  
+ls()
+alex_clean()
+ls()
+
+```
+
+## Conclusion
+
+This is all there is (currently).
+All these functions are rather simple wrappers around established R functions. 
+They can easily be modified to fit your needs and taste. 
+Take look at the [github repository of the ExPanDaR package](https://github.com/Alexandershemetev?tab=repositories) for the codes.
+Have fun!
