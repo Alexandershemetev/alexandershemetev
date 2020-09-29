@@ -25,9 +25,7 @@ data("Produc", package="plm")
 #data("Wages", package="plm")
 install_github("Alexandershemetev/alexandershemetev")
 library(alexandershemetev)
-alex_hello <<- function() {
-  print("Hello, Dear User!")
-}
+
 ```
 
 While the main purpose of the alexandershemetev package is to clarify working with R for people with very basic skills for the purposes of qualitative statistical analysis, this package also has additional useful functions and will be developed over time by adding new functions. 
@@ -74,7 +72,7 @@ Sometimes you need to visualize: how many missing values you have in your data, 
 
 ```{r na_revealing}
 # using dataset Produc from plm package as an example 
-# data("Produc", package="plm")
+data("Produc", package="plm")
 Produc$test = ifelse(Produc$unemp > 5, Produc$unemp, NA) #Adding NAs occasionally to the dataset
 alex_na_plot(Produc, ts_id = "year")
 

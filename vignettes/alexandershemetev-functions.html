@@ -323,91 +323,122 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>To see what alexandershemetev has to offer, let’s take a quick tour. For more detailed guidance on how to use a specific function presented below, take a look at the respective function’s help page.</p>
 <div id="preparation" class="section level2">
 <h2>Preparation</h2>
-<p>is designed for <code>helping to newcomers in R</code> with <code>\the most basic functions</code> to match the purposes of their statistical analysis. For this walk-through I will use the data set mtcars, which comes with the basic R environment. <code>{r variables} kable(data.frame(mtcars))</code> ## Descriptive Statistics</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">alex_dataframe_descriptive_table</span>(mtcars, <span class="dt">showdf =</span> <span class="ot">TRUE</span>, <span class="dt">showhtmlinR =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co">#&gt; Loading required package: plyr</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co">#&gt; Loading required package: dplyr</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="co">#&gt; Attaching package: &#39;dplyr&#39;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:plyr&#39;:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="co">#&gt;     arrange, count, desc, failwith, id, mutate, rename, summarise,</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="co">#&gt;     summarize</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="co">#&gt; The following object is masked from &#39;package:kableExtra&#39;:</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a><span class="co">#&gt;     group_rows</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a><span class="co">#&gt;     filter, lag</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:base&#39;:</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a><span class="co">#&gt; Loading required package: htmltools</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a><span class="co">#&gt; Loading required package: pander</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a><span class="co">#&gt; Warning: package &#39;pander&#39; was built under R version 4.0.2</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a><span class="co">#&gt; Attaching package: &#39;pander&#39;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a><span class="co">#&gt; The following object is masked from &#39;package:htmltools&#39;:</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a><span class="co">#&gt; </span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a><span class="co">#&gt;     p</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a><span class="co">#&gt; Loading required package: writexl</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Library knitr is prepared; Starting to process your data: &quot;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Your final output knitr_kable object name is t1_12_28_90 in your global R environment - you may use it later: &quot;</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Your final .html file with descriptive statistics is saved to: C:/Users/Alex/Documents/NewRPackage/alexandershemetev/alexandershemetev/vignettes/my_html_descr_table.html.html&quot;</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Trying opening your output descriptive statistics data in your browser from the saved file to your system: &quot;</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The new dataframe object t1_12_28_90_df with your descriptive table is set to your R global environment; it looks like this: &quot;</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;As requested by the user (same is by default), Excel file would be created if no such file would exist at: C:/Users/Alex/Documents/NewRPackage/alexandershemetev/alexandershemetev/vignettes/my_html_descr_tablehtml.xlsx. Please use the file you have or delete the previous version of the file manually (R suggests maybe some important info may be in your file - that is why it was not removed).&quot;</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a>t1_<span class="dv">12</span>_<span class="dv">28</span>_<span class="dv">90</span>_df</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true"></a><span class="co">#&gt;      Nobs       Mean    Std.dev.   Min.      25 %  Median   75 %    Max.</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true"></a><span class="co">#&gt; mpg    32  20.090625   6.0269481 10.400  15.42500  19.200  22.80  33.900</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true"></a><span class="co">#&gt; cyl    32   6.187500   1.7859216  4.000   4.00000   6.000   8.00   8.000</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true"></a><span class="co">#&gt; disp   32 230.721875 123.9386938 71.100 120.82500 196.300 326.00 472.000</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true"></a><span class="co">#&gt; hp     32 146.687500  68.5628685 52.000  96.50000 123.000 180.00 335.000</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true"></a><span class="co">#&gt; drat   32   3.596563   0.5346787  2.760   3.08000   3.695   3.92   4.930</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true"></a><span class="co">#&gt; wt     32   3.217250   0.9784574  1.513   2.58125   3.325   3.61   5.424</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true"></a><span class="co">#&gt; qsec   32  17.848750   1.7869432 14.500  16.89250  17.710  18.90  22.900</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true"></a><span class="co">#&gt; vs     32   0.437500   0.5040161  0.000   0.00000   0.000   1.00   1.000</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true"></a><span class="co">#&gt; am     32   0.406250   0.4989909  0.000   0.00000   0.000   1.00   1.000</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true"></a><span class="co">#&gt; gear   32   3.687500   0.7378041  3.000   3.00000   4.000   4.00   5.000</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true"></a><span class="co">#&gt; carb   32   2.812500   1.6152000  1.000   2.00000   2.000   4.00   8.000</span></span></code></pre></div>
+<p>is designed for <code>helping to newcomers in R</code> with <code>\the most basic functions</code> to match the purposes of their statistical analysis. For this walk-through I will use the data set mtcars, which comes with the basic R environment.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">alex_hello</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Hello, Dear User!&quot;</span></span></code></pre></div>
+</div>
+<div id="descriptive-statistics" class="section level2">
+<h2>Descriptive Statistics</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">alex_dataframe_descriptive_table</span>(mtcars, <span class="dt">showdf =</span> <span class="ot">TRUE</span>, <span class="dt">showhtmlinR =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="co">#&gt; Loading required package: plyr</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co">#&gt; Loading required package: dplyr</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="co">#&gt; Attaching package: &#39;dplyr&#39;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:plyr&#39;:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co">#&gt;     arrange, count, desc, failwith, id, mutate, rename, summarise,</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="co">#&gt;     summarize</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:plm&#39;:</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="co">#&gt;     between, lag, lead</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="co">#&gt; The following object is masked from &#39;package:kableExtra&#39;:</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a><span class="co">#&gt;     group_rows</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a><span class="co">#&gt;     filter, lag</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:base&#39;:</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a><span class="co">#&gt; Loading required package: htmltools</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a><span class="co">#&gt; Loading required package: pander</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a><span class="co">#&gt; Warning: package &#39;pander&#39; was built under R version 4.0.2</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a><span class="co">#&gt; Attaching package: &#39;pander&#39;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a><span class="co">#&gt; The following object is masked from &#39;package:htmltools&#39;:</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a><span class="co">#&gt;     p</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a><span class="co">#&gt; Loading required package: writexl</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Library knitr is prepared; Starting to process your data: &quot;</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Your final output knitr_kable object name is t1_12_28_90 in your global R environment - you may use it later: &quot;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Your final .html file with descriptive statistics is saved to: C:/Users/Alex/Documents/NewRPackage/alexandershemetev/alexandershemetev/vignettes/my_html_descr_table.html.html&quot;</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Trying opening your output descriptive statistics data in your browser from the saved file to your system: &quot;</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The new dataframe object t1_12_28_90_df with your descriptive table is set to your R global environment; it looks like this: &quot;</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;As requested by the user (same is by default), Excel file would be created if no such file would exist at: C:/Users/Alex/Documents/NewRPackage/alexandershemetev/alexandershemetev/vignettes/my_html_descr_tablehtml.xlsx. Please use the file you have or delete the previous version of the file manually (R suggests maybe some important info may be in your file - that is why it was not removed).&quot;</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true"></a>t1_<span class="dv">12</span>_<span class="dv">28</span>_<span class="dv">90</span>_df</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true"></a><span class="co">#&gt;      Nobs       Mean    Std.dev.   Min.      25 %  Median   75 %    Max.</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true"></a><span class="co">#&gt; mpg    32  20.090625   6.0269481 10.400  15.42500  19.200  22.80  33.900</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true"></a><span class="co">#&gt; cyl    32   6.187500   1.7859216  4.000   4.00000   6.000   8.00   8.000</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true"></a><span class="co">#&gt; disp   32 230.721875 123.9386938 71.100 120.82500 196.300 326.00 472.000</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true"></a><span class="co">#&gt; hp     32 146.687500  68.5628685 52.000  96.50000 123.000 180.00 335.000</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true"></a><span class="co">#&gt; drat   32   3.596563   0.5346787  2.760   3.08000   3.695   3.92   4.930</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true"></a><span class="co">#&gt; wt     32   3.217250   0.9784574  1.513   2.58125   3.325   3.61   5.424</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true"></a><span class="co">#&gt; qsec   32  17.848750   1.7869432 14.500  16.89250  17.710  18.90  22.900</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true"></a><span class="co">#&gt; vs     32   0.437500   0.5040161  0.000   0.00000   0.000   1.00   1.000</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true"></a><span class="co">#&gt; am     32   0.406250   0.4989909  0.000   0.00000   0.000   1.00   1.000</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true"></a><span class="co">#&gt; gear   32   3.687500   0.7378041  3.000   3.00000   4.000   4.00   5.000</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true"></a><span class="co">#&gt; carb   32   2.812500   1.6152000  1.000   2.00000   2.000   4.00   8.000</span></span></code></pre></div>
 </div>
 <div id="clear-environment-but-save-data-by-pattern" class="section level2">
 <h2>Clear environment but save data by pattern</h2>
 <p>The figure sizes have been customised so that you can easily put two images side-by-side.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>a =<span class="st"> </span><span class="dv">5</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>b =<span class="st"> </span><span class="dv">6</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>c1 =<span class="st"> </span>a <span class="op">+</span><span class="st"> </span>b</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>df1 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>gf1 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">6</span>,<span class="dv">8</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="kw">ls</span>()</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;a&quot;              &quot;b&quot;              &quot;c1&quot;             &quot;df1&quot;           </span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co">#&gt; [5] &quot;digitsx&quot;        &quot;gf1&quot;            &quot;my_path&quot;        &quot;t1_12_28_90&quot;   </span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="co">#&gt; [9] &quot;t1_12_28_90_df&quot;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="kw">alex_clean</span>(<span class="dt">except =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>), <span class="dt">pattern =</span> <span class="st">&quot;df&quot;</span>)  </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of object in your R environment before request for erasing was: a&quot;             </span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="co">#&gt; [2] &quot;The full name of object in your R environment before request for erasing was: b&quot;             </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="co">#&gt; [3] &quot;The full name of object in your R environment before request for erasing was: c1&quot;            </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a><span class="co">#&gt; [4] &quot;The full name of object in your R environment before request for erasing was: df1&quot;           </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a><span class="co">#&gt; [5] &quot;The full name of object in your R environment before request for erasing was: digitsx&quot;       </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a><span class="co">#&gt; [6] &quot;The full name of object in your R environment before request for erasing was: gf1&quot;           </span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a><span class="co">#&gt; [7] &quot;The full name of object in your R environment before request for erasing was: my_path&quot;       </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a><span class="co">#&gt; [8] &quot;The full name of object in your R environment before request for erasing was: t1_12_28_90&quot;   </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a><span class="co">#&gt; [9] &quot;The full name of object in your R environment before request for erasing was: t1_12_28_90_df&quot;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of preserved object in your R environment is: a&quot;             </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a><span class="co">#&gt; [2] &quot;The full name of preserved object in your R environment is: b&quot;             </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a><span class="co">#&gt; [3] &quot;The full name of preserved object in your R environment is: df1&quot;           </span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a><span class="co">#&gt; [4] &quot;The full name of preserved object in your R environment is: t1_12_28_90_df&quot;</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a><span class="kw">ls</span>()</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;a&quot;              &quot;b&quot;              &quot;df1&quot;            &quot;t1_12_28_90_df&quot;</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a><span class="kw">alex_clean</span>()</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of object in your R environment before request for erasing was: a&quot;             </span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a><span class="co">#&gt; [2] &quot;The full name of object in your R environment before request for erasing was: b&quot;             </span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a><span class="co">#&gt; [3] &quot;The full name of object in your R environment before request for erasing was: df1&quot;           </span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a><span class="co">#&gt; [4] &quot;The full name of object in your R environment before request for erasing was: t1_12_28_90_df&quot;</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Your Request to clear the entire R environment is received&quot;</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of preserved object in your R environment is: &quot;</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a><span class="kw">ls</span>()</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a><span class="co">#&gt; character(0)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>a =<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>b =<span class="st"> </span><span class="dv">6</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>c1 =<span class="st"> </span>a <span class="op">+</span><span class="st"> </span>b</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>df1 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>gf1 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">6</span>,<span class="dv">8</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="kw">ls</span>()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co">#&gt;  [1] &quot;a&quot;              &quot;b&quot;              &quot;c1&quot;             &quot;df1&quot;           </span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="co">#&gt;  [5] &quot;digitsx&quot;        &quot;gf1&quot;            &quot;my_path&quot;        &quot;Produc&quot;        </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="co">#&gt;  [9] &quot;t1_12_28_90&quot;    &quot;t1_12_28_90_df&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="kw">alex_clean</span>(<span class="dt">except =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>), <span class="dt">pattern =</span> <span class="st">&quot;df&quot;</span>)  </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="co">#&gt;  [1] &quot;The full name of object in your R environment before request for erasing was: a&quot;             </span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="co">#&gt;  [2] &quot;The full name of object in your R environment before request for erasing was: b&quot;             </span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="co">#&gt;  [3] &quot;The full name of object in your R environment before request for erasing was: c1&quot;            </span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a><span class="co">#&gt;  [4] &quot;The full name of object in your R environment before request for erasing was: df1&quot;           </span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a><span class="co">#&gt;  [5] &quot;The full name of object in your R environment before request for erasing was: digitsx&quot;       </span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a><span class="co">#&gt;  [6] &quot;The full name of object in your R environment before request for erasing was: gf1&quot;           </span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a><span class="co">#&gt;  [7] &quot;The full name of object in your R environment before request for erasing was: my_path&quot;       </span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a><span class="co">#&gt;  [8] &quot;The full name of object in your R environment before request for erasing was: Produc&quot;        </span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a><span class="co">#&gt;  [9] &quot;The full name of object in your R environment before request for erasing was: t1_12_28_90&quot;   </span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a><span class="co">#&gt; [10] &quot;The full name of object in your R environment before request for erasing was: t1_12_28_90_df&quot;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of preserved object in your R environment is: a&quot;             </span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a><span class="co">#&gt; [2] &quot;The full name of preserved object in your R environment is: b&quot;             </span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a><span class="co">#&gt; [3] &quot;The full name of preserved object in your R environment is: df1&quot;           </span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a><span class="co">#&gt; [4] &quot;The full name of preserved object in your R environment is: t1_12_28_90_df&quot;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a><span class="kw">ls</span>()</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;a&quot;              &quot;b&quot;              &quot;df1&quot;            &quot;t1_12_28_90_df&quot;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a><span class="kw">alex_clean</span>()</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of object in your R environment before request for erasing was: a&quot;             </span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a><span class="co">#&gt; [2] &quot;The full name of object in your R environment before request for erasing was: b&quot;             </span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a><span class="co">#&gt; [3] &quot;The full name of object in your R environment before request for erasing was: df1&quot;           </span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a><span class="co">#&gt; [4] &quot;The full name of object in your R environment before request for erasing was: t1_12_28_90_df&quot;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;Your Request to clear the entire R environment is received&quot;</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;The full name of preserved object in your R environment is: &quot;</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true"></a><span class="kw">ls</span>()</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true"></a><span class="co">#&gt; character(0)</span></span></code></pre></div>
+</div>
+<div id="reveal-nas-in-the-dataset" class="section level2">
+<h2>Reveal NAs in the dataset</h2>
+<p>Sometimes you need to visualize: how many missing values you have in your data, especially in the panel-type data. Good visualization may always help you with this.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="co"># using dataset Produc from plm package as an example </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="kw">data</span>(<span class="st">&quot;Produc&quot;</span>, <span class="dt">package=</span><span class="st">&quot;plm&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>Produc<span class="op">$</span>test =<span class="st"> </span><span class="kw">ifelse</span>(Produc<span class="op">$</span>unemp <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>, Produc<span class="op">$</span>unemp, <span class="ot">NA</span>) <span class="co">#Adding NAs occasionally to the dataset</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="kw">alex_na_plot</span>(Produc, <span class="dt">ts_id =</span> <span class="st">&quot;year&quot;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a><span class="co">#&gt; Loading required package: data.table</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a><span class="co">#&gt; Attaching package: &#39;data.table&#39;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a><span class="co">#&gt; The following objects are masked from &#39;package:dplyr&#39;:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a><span class="co">#&gt;     between, first, last</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a><span class="co">#&gt; The following object is masked from &#39;package:plm&#39;:</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a><span class="co">#&gt; </span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a><span class="co">#&gt;     between</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a><span class="co">#&gt; Scale for &#39;fill&#39; is already present. Adding another scale for &#39;fill&#39;, which</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a><span class="co">#&gt; will replace the existing scale.</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
