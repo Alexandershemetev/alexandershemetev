@@ -1,3 +1,6 @@
+Travis test OK
+Codecov-Travis test OK: https://codecov.io/gh/Alexandershemetev/alexandershemetev
+
 README
 
 This package is designed to help to the R beginners to use R and all its main functions in an easy way. 
