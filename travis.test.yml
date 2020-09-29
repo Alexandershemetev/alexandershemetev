@@ -1,0 +1,46 @@
+R for Travis-CI is not officially supported, but is community maintained.0.06s
+worker_info
+Worker information
+0.15s0.01s0.00s0.01s
+system_info
+Build system information
+0.00s0.00s0.02s0.00s0.01s0.39s0.00s0.00s0.00s0.01s0.01s0.10s0.00s0.80s0.00s0.00s6.04s0.00s2.66s0.00s2.44s
+docker_mtu
+resolvconf
+Please file any issues at https://travis-ci.community/c/languages/r
+and mention @jeroen and @jimhester in the issue
+R-install
+Installing R
+0.00s
+git.checkout
+0.75s$ git clone --depth=50 --branch=master https://github.com/Alexandershemetev/alexandershemetev.git Alexandershemetev/alexandershemetev
+0.01s
+R session information
+$ Rscript -e 'sessionInfo()'
+R version 4.0.2 (2020-06-22)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 16.04.6 LTS
+Matrix products: default
+BLAS:   /usr/lib/openblas-base/libblas.so.3
+LAPACK: /usr/lib/libopenblasp-r0.2.18.so
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+loaded via a namespace (and not attached):
+[1] compiler_4.0.2
+R-dependencies
+Installing package dependencies
+Building package
+Building with: R CMD build 
+0.75s$ R CMD build  .
+* checking for file ‘./DESCRIPTION’ ... OK
+* preparing ‘alexandershemetev’:
+* checking DESCRIPTION meta-information ... OK
+* installing the package to build vignettes ... OK 
+* PASSED
