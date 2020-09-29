@@ -1,4 +1,4 @@
-
+![travis](https://img.shields.io/travis/73VW/TechnicalReport.svg)
 <img src=“https://img.shields.io/travis/73VW/TechnicalReport.svg”>
 Travis test OK
 Codecov-Travis test OK: https://codecov.io/gh/Alexandershemetev/alexandershemetev
