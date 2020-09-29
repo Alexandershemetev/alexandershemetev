@@ -1,0 +1,33 @@
+==> Testing R file using 'testthat'
+
+Loading alexandershemetev
+Warning messages:
+1: In loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) :
+  there is no package called 'R'
+2: In loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) :
+  there is no package called 'R'
+3: package 'testthat' was built under R version 4.0.2 
+4: In setup_ns_exports(path, export_all, export_imports) :
+  Objects listed as exports, but not present in namespace: R, environment, global, to
+<U+221A> |  OK F W S | Context
+[1] "The full name of object in your R environment before request for erasing was: "
+[1] "The full name of preserved object in your R environment is: "
+<U+221A> |   1       | alex_na_plot [0.8 s]
+
+== Results ==============================================
+Duration: 0.9 s
+
+OK:       1
+Failed:   0
+Warnings: 0
+Skipped:  0
+
+Test complete
+WARNING: Rtools is required to build R packages but no version of Rtools compatible with the currently running version of R was found. Note that the following incompatible version(s) of Rtools were found:
+
+  - Rtools 3.5 (installed at C:\RBuildTools\3.5)
+  - Rtools 3.5 (installed at C:\RBuildTools\3.5)
+
+Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
