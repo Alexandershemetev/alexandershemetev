@@ -1,0 +1,38 @@
+√  checking for file 'C:\Users\Alex\AppData\Local\Temp\RtmpIjtNRN\remotes2f744f2e1d0\Alexandershemetev-alexandershemetev-a007ad9/DESCRIPTION' (1.3s)
+-  preparing 'alexandershemetev': (1.1s)
+√  checking DESCRIPTION meta-information ... OK
+-  checking for LF line-endings in source and make files and shell scripts (375ms)
+-  checking for empty or unneeded directories
+-  building 'alexandershemetev_0.1.0.tar.gz'
+   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+     storing paths of more than 100 bytes is not portable:
+     'alexandershemetev/vignettes/rsconnect/documents/alexandershemetev-functions.Rmd/rpubs.com/rpubs/Document.dcf'
+   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+     storing paths of more than 100 bytes is not portable:
+     'alexandershemetev/vignettes/rsconnect/documents/alexandershemetev-functions.Rmd/rpubs.com/rpubs/Publish Document.dcf'
+   
+Installing package into ‘C:/Users/Alex/Documents/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+* installing *source* package 'alexandershemetev' ...
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+  converting help for package 'alexandershemetev'
+    finding HTML links ... done
+    alex_clean                              html  
+    alex_dataframe_descriptive_table        html  
+    alex_hello                              html  
+    alex_na_plot                            html  
+    hello                                   html  
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+*** arch - i386
+*** arch - x64
+** testing if installed package can be loaded from final location
+*** arch - i386
+*** arch - x64
+** testing if installed package keeps a record of temporary installation path
+* DONE (alexandershemetev)
