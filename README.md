@@ -1,5 +1,6 @@
 ![travis](https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main)
 ![travis](https://travis-ci.com/github/Alexandershemetev/alexandrshemetev/builds/190080575)
+<img scr="https://learn.adafruit.com/assets/50246">
 Travis test OK
 Codecov-Travis test OK: https://codecov.io/gh/Alexandershemetev/alexandershemetev
 
