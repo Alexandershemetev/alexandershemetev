@@ -4,8 +4,7 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: Alexander Shemetev
 Maintainer: The package maintainer <alexandershemetev@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Prepares advanced descriptive statistics for working with the data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
