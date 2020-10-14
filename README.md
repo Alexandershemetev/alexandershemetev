@@ -1,5 +1,5 @@
 ![travis](https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main)
-<img src=“https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main”>
+
 Travis test OK
 Codecov-Travis test OK: https://codecov.io/gh/Alexandershemetev/alexandershemetev
 
