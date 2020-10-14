@@ -1,4 +1,3 @@
-![Travis](https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main)
 [![Travis pass file](https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main)](https://travis-ci.com/github/Alexandershemetev/alexandrshemetev/builds/190080575)
 
 Travis test OK
