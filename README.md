@@ -1,7 +1,7 @@
-[![Travis pass file](https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main)](https://travis-ci.com/github/Alexandershemetev/alexandrshemetev/builds/190080575)
+<!--[![Travis pass file](https://travis-ci.com/Alexandershemetev/alexandrshemetev.svg?branch=main)](https://travis-ci.com/github/Alexandershemetev/alexandrshemetev/builds/190080575) -->
 
-Travis test OK
-Codecov-Travis test OK: https://codecov.io/gh/Alexandershemetev/alexandershemetev
+<!--Travis test OK
+Codecov-Travis test OK: https://codecov.io/gh/Alexandershemetev/alexandershemetev -->
 
 README
 
